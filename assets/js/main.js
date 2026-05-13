@@ -3,12 +3,11 @@
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    // Animate hamburger
-    const spans = hamburger.querySelectorAll('span');
-    spans.forEach(span => span.classList.toggle('active'));
-});
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+}
 
 // Close mobile menu when clicking a link
 document.querySelectorAll('.nav-links a').forEach(link => {
@@ -45,7 +44,7 @@ window.addEventListener('scroll', () => {
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if (scrollY >= sectionTop - 200) {
+        if (window.scrollY >= sectionTop - 200) {
             current = section.getAttribute('id');
         }
     });
@@ -58,53 +57,19 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Counter animation for stats
-const counters = document.querySelectorAll('.counter');
-const speed = 200;
+// Navbar background change on scroll
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+        navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
+    } else {
+        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+        navbar.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.05)';
+    }
+});
 
-const animateCounter = (counter) => {
-    const target = parseInt(counter.getAttribute('data-target'));
-    let count = 0;
-    const increment = target / speed;
-    
-    const updateCount = () => {
-        if (count < target) {
-            count += increment;
-            counter.innerText = Math.ceil(count);
-            setTimeout(updateCount, 10);
-        } else {
-            counter.innerText = target;
-        }
-    };
-    updateCount();
-};
-
-// Intersection Observer for counters
-const observerOptions = {
-    threshold: 0.5,
-    rootMargin: '0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const countersInView = entry.target.querySelectorAll('.counter');
-            countersInView.forEach(counter => {
-                if (counter.innerText === '0') {
-                    animateCounter(counter);
-                }
-            });
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-const heroStats = document.querySelector('.hero-stats');
-if (heroStats) {
-    observer.observe(heroStats);
-}
-
-// Contact Form Handling (Demo)
+// Contact Form Handling
 const contactForm = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
 
@@ -114,7 +79,6 @@ if (contactForm) {
         
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
         const message = document.getElementById('message').value;
         
         // Simple validation
@@ -136,8 +100,8 @@ if (contactForm) {
             return;
         }
         
-        // Simulate form submission (replace with actual API endpoint later)
-        formStatus.innerHTML = '<span style="color: #10b981;">✅ Sending message... (Demo mode - your message would be sent here)</span>';
+        // Simulate form submission
+        formStatus.innerHTML = '<span style="color: #10b981;">✅ Sending message...</span>';
         
         // Simulate API call delay
         setTimeout(() => {
@@ -147,43 +111,10 @@ if (contactForm) {
                 formStatus.innerHTML = '';
             }, 4000);
         }, 1000);
-        
-        // For actual implementation, you would use fetch() to send to a backend
-        // Example:
-        // const response = await fetch('/api/contact', {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify({ name, email, subject, message })
-        // });
     });
 }
 
-// Navbar background change on scroll
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
-    } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.05)';
-    }
-});
-
-// Typing effect for hero (optional)
-const heroTitle = document.querySelector('.hero-content h1');
-if (heroTitle) {
-    // Just a subtle animation on load
-    heroTitle.style.opacity = '0';
-    heroTitle.style.transform = 'translateY(20px)';
-    setTimeout(() => {
-        heroTitle.style.transition = 'all 0.6s ease';
-        heroTitle.style.opacity = '1';
-        heroTitle.style.transform = 'translateY(0)';
-    }, 100);
-}
-
-// Add loading animation for project cards
+// Animation for project cards on scroll
 const projectCards = document.querySelectorAll('.project-card');
 const cardObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -204,5 +135,26 @@ projectCards.forEach(card => {
     cardObserver.observe(card);
 });
 
-// Console log for developer
-console.log('🚀 DevOps Portfolio loaded successfully! Ready to customize.');
+// Animation for skill cards
+const skillCards = document.querySelectorAll('.skill-cat');
+const skillObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '0';
+            entry.target.style.transform = 'translateY(15px)';
+            setTimeout(() => {
+                entry.target.style.transition = 'all 0.4s ease';
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }, 100);
+            skillObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+
+skillCards.forEach(card => {
+    skillObserver.observe(card);
+});
+
+// Console log
+console.log('🚀 Avinash Ganta - DevOps Portfolio Loaded Successfully!');
