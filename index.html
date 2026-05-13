@@ -1,0 +1,344 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="DevOps Engineer Portfolio - Cloud Infrastructure, CI/CD, Kubernetes, Infrastructure as Code">
+    <meta name="author" content="Your Name">
+    <title>DevOps Engineer | Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="#home">DE<span>vOps</span></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-badge">
+                    <i class="fas fa-terminal"></i> DevOps Engineer
+                </span>
+                <h1>Building & Scaling<br>Cloud Infrastructure<span class="dot">.</span></h1>
+                <p>Automation-first mindset | 7+ years of experience in CI/CD, Kubernetes, Terraform, and cloud-native architectures. I bridge the gap between development and operations.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        Let's Connect <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#projects" class="btn btn-outline">
+                        View Work <i class="fas fa-code-branch"></i>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div>
+                        <span class="counter" data-target="85">0</span>+
+                        <p>Deployments</p>
+                    </div>
+                    <div>
+                        <span class="counter" data-target="99">0</span>.<span class="counter" data-target="9">0</span>%
+                        <p>Uptime SLA</p>
+                    </div>
+                    <div>
+                        <span class="counter" data-target="25">0</span>+
+                        <p>Cloud Projects</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="code-card">
+                    <i class="fas fa-terminal"></i>
+                    <pre><code>$ kubectl get nodes
+NAME     STATUS   ROLES    AGE
+node-1   Ready    master   42d
+node-2   Ready    worker   42d
+
+$ terraform plan
+No changes. Infrastructure is up-to-date.
+
+$ git push origin main
+✅ CI/CD pipeline triggered</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about bg-light">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>I'm <strong>Alex Rivera</strong>, a passionate DevOps Engineer dedicated to automating infrastructure, optimizing cloud costs, and building resilient systems. I help engineering teams ship faster with confidence using modern CI/CD pipelines and GitOps workflows.</p>
+                    <p>Previously at <strong>CloudScale Inc.</strong> and <strong>FinTech Labs</strong>, I've led migration from monoliths to microservices, reduced deployment time by 80%, and implemented observability stacks that cut MTTR by 60%.</p>
+                    <div class="personal-info">
+                        <div><i class="fas fa-envelope"></i> alex.rivera@devopsengineer.com</div>
+                        <div><i class="fas fa-phone-alt"></i> +1 (555) 789-3421</div>
+                        <div><i class="fas fa-map-marker-alt"></i> Austin, TX / Remote</div>
+                        <div><i class="fab fa-github"></i> github.com/alexrivera-devops</div>
+                        <div><i class="fab fa-linkedin"></i> linkedin.com/in/alexrivera-devops</div>
+                    </div>
+                </div>
+                <div class="about-badge">
+                    <div class="badge-card">
+                        <i class="fas fa-quote-left"></i>
+                        <h3>DevOps Philosophy</h3>
+                        <p>"Infrastructure as Code, Automation Everywhere, Continuous Improvement, and Blameless Postmortems."</p>
+                        <div class="badge-footer">
+                            <i class="fas fa-infinity"></i> GitOps
+                            <i class="fas fa-cloud-upload-alt"></i> Cloud Native
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills bg-alt">
+        <div class="container">
+            <h2>Technical Arsenal</h2>
+            <div class="skills-grid">
+                <div class="skill-cat">
+                    <h3><i class="fas fa-cloud"></i> Cloud Providers</h3>
+                    <ul>
+                        <li><i class="fab fa-aws"></i> AWS (EKS, EC2, RDS, S3, Lambda)</li>
+                        <li><i class="fab fa-microsoft"></i> Azure (AKS, DevOps)</li>
+                        <li><i class="fab fa-google"></i> GCP (GKE, Cloud Run)</li>
+                    </ul>
+                </div>
+                <div class="skill-cat">
+                    <h3><i class="fas fa-code-branch"></i> CI/CD & Automation</h3>
+                    <ul>
+                        <li><i class="fab fa-jenkins"></i> Jenkins, GitHub Actions</li>
+                        <li><i class="fas fa-git-alt"></i> GitLab CI, CircleCI</li>
+                        <li><i class="fas fa-sync-alt"></i> ArgoCD, Flux</li>
+                    </ul>
+                </div>
+                <div class="skill-cat">
+                    <h3><i class="fas fa-cubes"></i> Containers & Orchestration</h3>
+                    <ul>
+                        <li><i class="fab fa-docker"></i> Docker, Kubernetes (k8s)</li>
+                        <li><i class="fas fa-chart-pie"></i> Helm, Kustomize</li>
+                        <li><i class="fas fa-network-wired"></i> Istio, Linkerd</li>
+                    </ul>
+                </div>
+                <div class="skill-cat">
+                    <h3><i class="fas fa-code"></i> IaC & Config Mgmt</h3>
+                    <ul>
+                        <li><i class="fas fa-terraform"></i> Terraform, Terragrunt</li>
+                        <li><i class="fas fa-cog"></i> Ansible, Puppet</li>
+                        <li><i class="fas fa-cloud-upload-alt"></i> Pulumi, CloudFormation</li>
+                    </ul>
+                </div>
+                <div class="skill-cat">
+                    <h3><i class="fas fa-chart-line"></i> Monitoring & Observability</h3>
+                    <ul>
+                        <li><i class="fas fa-chart-simple"></i> Prometheus + Grafana</li>
+                        <li><i class="fas fa-search"></i> ELK Stack, Loki</li>
+                        <li><i class="fas fa-database"></i> Datadog, New Relic</li>
+                    </ul>
+                </div>
+                <div class="skill-cat">
+                    <h3><i class="fas fa-database"></i> Dev & Scripting</h3>
+                    <ul>
+                        <li><i class="fab fa-python"></i> Python, Bash, Go</li>
+                        <li><i class="fas fa-code"></i> Git, GitHub/GitLab</li>
+                        <li><i class="fas fa-linux"></i> Linux System Administration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience bg-light">
+        <div class="container">
+            <h2>Work Experience</h2>
+            <div class="timeline">
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <span class="exp-title">Senior DevOps Engineer</span>
+                        <span class="exp-date">2022 – Present</span>
+                    </div>
+                    <div class="exp-company">CloudScale Inc. · Remote</div>
+                    <ul>
+                        <li>Led migration of 50+ microservices to AWS EKS, reducing infrastructure costs by 35%.</li>
+                        <li>Implemented GitOps workflows using ArgoCD, decreasing deployment failures by 45%.</li>
+                        <li>Built Terraform modules for multi-region VPC, RDS, and IAM policies.</li>
+                        <li>Established SLI/SLOs and improved observability with Prometheus/Grafana stack.</li>
+                    </ul>
+                </div>
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <span class="exp-title">Cloud Automation Engineer</span>
+                        <span class="exp-date">2019 – 2022</span>
+                    </div>
+                    <div class="exp-company">FinTech Labs · New York, NY</div>
+                    <ul>
+                        <li>Designed CI/CD pipelines with Jenkins and GitHub Actions, reducing build time by 60%.</li>
+                        <li>Managed Kubernetes clusters across dev/staging/prod with Helm charts.</li>
+                        <li>Automated infrastructure provisioning using Ansible and Terraform.</li>
+                        <li>Implemented centralized logging with ELK stack for 200+ services.</li>
+                    </ul>
+                </div>
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <span class="exp-title">DevOps Engineer</span>
+                        <span class="exp-date">2017 – 2019</span>
+                    </div>
+                    <div class="exp-company">StartUp Dynamic · Austin, TX</div>
+                    <ul>
+                        <li>Containerized legacy applications using Docker, reducing environment setup time by 80%.</li>
+                        <li>Automated backup and recovery processes using bash scripts and AWS S3.</li>
+                        <li>Set up monitoring and alerting for production systems.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects bg-alt">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <i class="fas fa-cloud-upload-alt project-icon"></i>
+                    <h3>Kubernetes GitOps Platform</h3>
+                    <p>End-to-end GitOps implementation using ArgoCD, Crossplane, and AWS EKS. Automated multi-cluster application deployment with policy as code.</p>
+                    <div class="tech-stack">
+                        <span>Terraform</span>
+                        <span>EKS</span>
+                        <span>ArgoCD</span>
+                        <span>Helm</span>
+                        <span>Kyverno</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <i class="fas fa-chart-line project-icon"></i>
+                    <h3>Observability Stack as Code</h3>
+                    <p>Full monitoring and logging suite deployed on Kubernetes: Prometheus, Grafana, Loki, Tempo, and Alertmanager with custom dashboards.</p>
+                    <div class="tech-stack">
+                        <span>Prometheus</span>
+                        <span>Grafana</span>
+                        <span>Loki</span>
+                        <span>K8s</span>
+                        <span>Jsonnet</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <i class="fas fa-infinity project-icon"></i>
+                    <h3>Serverless CI/CD Pipeline</h3>
+                    <p>Event-driven pipeline using AWS Lambda, API Gateway, S3, and CodePipeline to automate testing and deployment for serverless applications.</p>
+                    <div class="tech-stack">
+                        <span>AWS Lambda</span>
+                        <span>API Gateway</span>
+                        <span>GitHub Actions</span>
+                        <span>CDK</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <i class="fas fa-shield-alt project-icon"></i>
+                    <h3>Security Scanning Automation</h3>
+                    <p>Integrated security scanning (Trivy, Snyk, OPA) into CI/CD pipelines. Automated vulnerability reporting and compliance checks.</p>
+                    <div class="tech-stack">
+                        <span>Trivy</span>
+                        <span>OPA</span>
+                        <span>Jenkins</span>
+                        <span>SonarQube</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact bg-light">
+        <div class="container">
+            <h2>Let's Connect</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p>I'm available for freelance opportunities, full-time roles, or discussing DevOps strategies. Let's build something amazing together!</p>
+                    <div class="contact-social">
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Dev.to"><i class="fab fa-dev"></i></a>
+                        <a href="#" aria-label="Stack Overflow"><i class="fab fa-stack-overflow"></i></a>
+                    </div>
+                    <div class="direct-contact">
+                        <p><i class="fas fa-envelope"></i> alex.rivera@devopsengineer.com</p>
+                        <p><i class="fab fa-slack"></i> DevOps Community: @alex_devops</p>
+                        <p><i class="fab fa-discord"></i> Discord: alex_devops#1234</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" placeholder="Tell me about your infrastructure needs or project..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            Send Message <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <p id="formStatus" class="form-status"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Alex Rivera - DevOps Engineer. All rights reserved.</p>
+                <p>Built with <i class="fas fa-heart"></i> for automation & cloud native technologies</p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
